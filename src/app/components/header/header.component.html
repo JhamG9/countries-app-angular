@@ -1,1 +1,7 @@
-<p>header works!</p>
+<div class="header" [ngClass]="config.themeBlack? 'header--theme-black': ''">
+    <p class="header__title">Where in the world?</p>
+    <div class="header__change-dark" (click)="changeDarkMode()">
+        <i class="fa fa-moon-o header__change-dark__icon"></i>
+        <p>Dark mode</p>
+    </div>
+</div>
