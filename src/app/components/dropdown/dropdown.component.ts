@@ -10,8 +10,10 @@ import { ConfigService } from 'src/app/services/config/config.service';
 export class DropdownComponent implements OnInit {
 
   @Input() items: Array<Dropdown> = [];
+  @Input() placeholder: string;
   @Output() valueChange = new EventEmitter<Dropdown>();
 
+  labelSelected: string = '';
   showOptions: boolean = false;
 
   constructor(public config: ConfigService) { }
@@ -31,6 +33,7 @@ export class DropdownComponent implements OnInit {
    */
   selectItem(item: Dropdown) {
     this.showOptions = false;
+    this.labelSelected = item.label;
     this.valueChange.emit(item);
   }
 

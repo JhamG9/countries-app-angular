@@ -16,4 +16,11 @@ export class ApiCountryService {
   getCountriesByRegion(region: string) {
     return this.api.get(`${Constants.endpoints.region}${region}`);
   }
+
+  /**
+   * Función obtiene todos los paises del endpoint
+   */
+  getAllCountries() {
+    return this.api.get(`${Constants.endpoints.all}`);
+  }
 }

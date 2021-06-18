@@ -15,8 +15,17 @@ export class CountryService {
    * @param region nombre del continente
    */
   getCountriesByContinent(region: string) {
-    this.apiCountryService.getCountriesByRegion(region).subscribe((resp) => {
-      console.log(resp);
+    this.apiCountryService.getCountriesByRegion(region).subscribe((resp:any) => {
+      this.countriesList = resp;
+    });
+  }
+
+  /**
+   * Función obtiene todos los paises
+   */
+  getAllCountries() {
+    this.apiCountryService.getAllCountries().subscribe((resp:any) => {
+      this.countriesList = resp;
     });
   }
 }

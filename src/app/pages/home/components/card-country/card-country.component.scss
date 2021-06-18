@@ -1,0 +1,43 @@
+@import "colors";
+
+.card {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0px 5px rgb(0 0 0 / 0.3);
+
+    &__theme-dark {
+        background-color: #2b3743;
+        color: $white-higher-darken;
+    }
+
+    &__img {
+        width: 100%;
+        height: 160px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    &__info {
+        padding: 15px 10px;
+
+        &__title {
+            font-weight: 700;
+        }
+
+        &__est {
+            margin-top: 5px;
+
+            &__item {
+                font-size: 11px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+// Media Querys
+@media screen and (max-width: 575px) {
+    .card__img {
+        height: 200px;
+    }
+}

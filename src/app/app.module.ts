@@ -9,6 +9,7 @@ import { SearchAndFilterComponent } from './pages/home/components/search-and-fil
 import { InputComponent } from './components/input/input.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CardCountryComponent } from './pages/home/components/card-country/card-country.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     SearchAndFilterComponent,
     InputComponent,
-    DropdownComponent
+    DropdownComponent,
+    CardCountryComponent
   ],
   imports: [
     BrowserModule,

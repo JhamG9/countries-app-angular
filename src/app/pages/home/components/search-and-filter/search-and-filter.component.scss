@@ -13,3 +13,19 @@
         max-width: 230px;
     }
 }
+
+
+// Media query
+@media screen and (max-width: 575px){
+    .con {
+        flex-direction: column;
+
+        &__search{
+            max-width: none !important;
+        }
+
+        &__filter{
+            margin-top: 10px;
+        }
+    }
+}

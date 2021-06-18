@@ -1,0 +1,11 @@
+<div class="card" [ngClass]="config.themeBlack ? 'card__theme-dark': ''">
+    <img loading="lazy" [src]="data?.flag" class="card__img" />
+    <div class="card__info">
+        <p class="card__info__title">{{data.name}}</p>
+        <div class="card__info__est">
+            <p class="card__info__est__item"><b>Population:</b> {{data.population}}</p>
+            <p class="card__info__est__item"><b>Region:</b> {{data.region}}</p>
+            <p class="card__info__est__item"><b>Capital:</b> {{data.capital}}</p>
+        </div>
+    </div>
+</div>
