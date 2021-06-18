@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchAndFilterComponent } from './pages/home/components/search-and-filter/search-and-filter.component';
 import { InputComponent } from './components/input/input.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

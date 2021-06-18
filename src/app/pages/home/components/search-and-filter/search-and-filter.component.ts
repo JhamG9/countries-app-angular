@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigService } from '../../../../services/config.service';
 import { Dropdown } from 'src/app/models/dropdown';
+import { ConfigService } from 'src/app/services/config/config.service';
+import { CountryService } from '../../../../services/business/country.service';
 
 @Component({
   selector: 'app-search-and-filter',
@@ -17,7 +18,8 @@ export class SearchAndFilterComponent implements OnInit {
     { id: 'Oceania', label: 'Oceania' },
   ];
 
-  constructor(public config: ConfigService) { }
+  constructor(public config: ConfigService,
+    private countryService:CountryService) { }
 
   ngOnInit(): void {
   }
@@ -27,9 +29,7 @@ export class SearchAndFilterComponent implements OnInit {
    * @param item objeto del ripo Dropdown
    */
   selectContinent(item: Dropdown) {
-    
-    
-    console.log(item);
+    this.countryService.getCountriesByContinent(item.id);    
   }
 
 }
