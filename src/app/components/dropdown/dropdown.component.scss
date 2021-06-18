@@ -1,0 +1,60 @@
+@import "colors";
+
+.drop {
+    width: 100%;
+    position: relative;
+
+    &--theme-black {
+        .drop__label {
+            background-color: $black-primary;
+            color: $white-higher-darken;
+        }
+
+        .drop__opts {
+            background-color: $black-primary;
+            color: $white-higher-darken;
+        }
+
+        .drop__opts__item:hover{
+            background-color: darken($color: $black-primary, $amount: 10%);
+        }
+    }
+
+    &__label {
+        box-shadow: 0 0px 5px rgb(0 0 0 / 0.2);
+        border-radius: 5px;
+        border: none;
+        padding: 15px;
+        font-size: 13px;
+        color: $black-primary;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        background-color: $white;
+
+        &__icon {
+            font-weight: 800;
+        }
+    }
+
+    &__opts {
+        margin-top: 6px;
+        border-radius: 5px;
+        box-shadow: 0 0px 3px rgb(0 0 0 / 0.2);
+        background-color: $white;
+        position: absolute;
+        width: 100%;
+        z-index: 9999999;
+
+        &__item {
+            cursor: pointer;
+            padding: 6px 15px;
+            font-size: 14px;
+
+            &:hover {
+                background-color: darken($color: $white, $amount: 10%);
+            }
+        }
+    }
+}

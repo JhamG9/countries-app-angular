@@ -1,1 +1,10 @@
+@import "colors";
 
+.content {
+    height: 100%;
+    background-color: $gray-primary-higher;
+
+    &--theme-dark {
+        background-color: #202d36;
+    }
+}

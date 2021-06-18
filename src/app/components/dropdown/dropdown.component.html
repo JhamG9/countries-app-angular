@@ -1,0 +1,14 @@
+<div class="drop" [ngClass]="config.themeBlack? 'drop--theme-black': ''">
+    <div class="drop__label noselect" (click)="showitems()">
+        <p>Filter by Region</p>
+        <i class="fa fa-angle-down drop__label__icon"></i>
+    </div>
+
+    <div class="drop__opts animate__animated animate__fadeIn" *ngIf="showOptions">
+        <div class="drop__opts__item">Hola</div>
+        <div class="drop__opts__item">Hola</div>
+        <div class="drop__opts__item">Hola</div>
+        <div class="drop__opts__item">Hola</div>
+    </div>
+
+</div>

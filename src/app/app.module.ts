@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchAndFilterComponent } from './pages/home/components/search-and-filter/search-and-filter.component';
 import { InputComponent } from './components/input/input.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { InputComponent } from './components/input/input.component';
     HomeComponent,
     HeaderComponent,
     SearchAndFilterComponent,
-    InputComponent
+    InputComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
