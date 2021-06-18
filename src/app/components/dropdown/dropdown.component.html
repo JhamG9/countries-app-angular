@@ -5,10 +5,6 @@
     </div>
 
     <div class="drop__opts animate__animated animate__fadeIn" *ngIf="showOptions">
-        <div class="drop__opts__item">Hola</div>
-        <div class="drop__opts__item">Hola</div>
-        <div class="drop__opts__item">Hola</div>
-        <div class="drop__opts__item">Hola</div>
+        <div class="drop__opts__item" *ngFor="let i of items" (click)="selectItem(i)">{{i.label}}</div>
     </div>
-
 </div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Dropdown } from 'src/app/models/dropdown';
 import { ConfigService } from '../../services/config.service';
 
 @Component({
@@ -7,6 +8,9 @@ import { ConfigService } from '../../services/config.service';
   styleUrls: ['./dropdown.component.scss']
 })
 export class DropdownComponent implements OnInit {
+
+  @Input() items: Array<Dropdown> = [];
+  @Output() valueChange = new EventEmitter<Dropdown>();
 
   showOptions: boolean = false;
 
@@ -20,6 +24,14 @@ export class DropdownComponent implements OnInit {
    */
   showitems() {
     this.showOptions = !this.showOptions;
+  }
+
+  /**
+   * Función selecciona una opción del listado de items
+   */
+  selectItem(item: Dropdown) {
+    this.showOptions = false;
+    this.valueChange.emit(item);
   }
 
 }
