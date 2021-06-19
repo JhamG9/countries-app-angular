@@ -10,6 +10,9 @@ import { InputComponent } from './components/input/input.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardCountryComponent } from './pages/home/components/card-country/card-country.component';
+import { FormsModule } from '@angular/forms';
+import { DetailCountryComponent } from './pages/detail-country/detail-country.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -19,9 +22,12 @@ import { CardCountryComponent } from './pages/home/components/card-country/card-
     SearchAndFilterComponent,
     InputComponent,
     DropdownComponent,
-    CardCountryComponent
+    CardCountryComponent,
+    DetailCountryComponent,
+    ButtonComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule

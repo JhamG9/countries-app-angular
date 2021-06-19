@@ -1,0 +1,54 @@
+<div class="detail">
+    <app-button (click)="goBackPage()"></app-button>
+
+    <div class="detail__body" *ngIf="countryService.countryDetail">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 detail__body__flight">
+                <img class="detail__body__img" [src]="countryService.countryDetail.flag" />
+            </div>
+            <div class="col-xs-12 col-sm-6" [ngClass]="config.themeBlack ? 'detail__body__info--theme-dark': ''">
+                <div class="detail__body__info">
+                    <p class="detail__body__info__name">{{countryService.countryDetail.name}}</p>
+
+                    <div class="row detail__body__info__details">
+                        <div class="col-sm-12 col-md-6">
+                            <p class="detail__body__info__item" *ngIf="countryService.countryDetail.nativeName">
+                                <b>Native name: </b> {{countryService.countryDetail.nativeName}}
+                            </p>
+                            <p class="detail__body__info__item"><b>Population:
+                                </b>{{countryService.countryDetail.population}}</p>
+                            <p class="detail__body__info__item"><b>Region: </b>{{countryService.countryDetail.region}}
+                            </p>
+                            <p class="detail__body__info__item"><b>Sub Region:
+                                </b>{{countryService.countryDetail.subregion}}</p>
+                            <p class="detail__body__info__item"><b>Capital: </b>{{countryService.countryDetail.capital}}
+                            </p>
+                        </div>
+                        <div class="col-sm-12 col-md-6 info-second">
+                            <p class="detail__body__info__item"><b>Top Level Domain:
+                                </b>{{countryService.countryDetail.topLevelDomain[0]}}</p>
+                            <p class="detail__body__info__item"><b>Currencies:
+                                </b>{{countryService.countryDetail.currencies[0].name}}</p>
+                            <p class="detail__body__info__item"><b>Languages: </b>
+                                <span *ngFor="let language of countryService.countryDetail.languages; let i = index;">
+                                    {{language.name}}{{ i+1 < countryService.countryDetail.languages.length ? ',' : ''
+                                        }} </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail__body__border">
+                    <p class="detail__body__border__label">Border Countries: </p>
+
+                    <div class="detail__body__border__countries">
+                        <p class="detail__body__border__countries__item"
+                            *ngFor="let border of countryService.countryDetail.borders">
+                            {{border}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

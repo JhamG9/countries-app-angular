@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CountryService } from '../../services/business/country.service';
 
 @Component({
@@ -8,10 +9,19 @@ import { CountryService } from '../../services/business/country.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public countryService: CountryService) { }
+  constructor(public countryService: CountryService,
+    public router: Router) { }
 
-  ngOnInit(): void {  
+  ngOnInit(): void {
     this.countryService.getAllCountries();
+  }
+
+  /**
+   * Función ve el detalle del pais
+   * @param country objeto de la respuesta
+   */
+  seeDetailCountry(country: any) {
+    this.router.navigate([`/detail/${country.name}`]);
   }
 
 }

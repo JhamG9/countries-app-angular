@@ -1,6 +1,6 @@
 <div class="con">
     <div class="con__search">
-        <app-input [placeholder]="'Search for a country...'" [icon]="'fa fa-search'"></app-input>
+        <app-input (keyUpChange)="changeInputSearch($event)" [placeholder]="'Search for a country...'" [icon]="'fa fa-search'"></app-input>
     </div>
     <div class="con__filter">
         <app-dropdown [items]="continents" [placeholder]="'Filter by Region'" (valueChange)="selectContinent($event)">

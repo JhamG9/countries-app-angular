@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { sprintf } from 'sprintf-js';
 import { ApiService } from './api.service';
 import { Constants } from '../../utils/constants';
 
@@ -22,5 +23,20 @@ export class ApiCountryService {
    */
   getAllCountries() {
     return this.api.get(`${Constants.endpoints.all}`);
+  }
+
+  /**
+   * Función obtiene los paises por nombre del endpoint
+   */
+  getCountriesByName(name: string) {
+    return this.api.get(`${Constants.endpoints.searchByName}${name}`);
+  }
+
+  /**
+   * Función obtiene el pais por el nombre
+   * @param name 
+   */
+  getDataCountryByName(name: string) {
+    return this.api.get(sprintf(Constants.endpoints.getCountryByName, name));
   }
 }

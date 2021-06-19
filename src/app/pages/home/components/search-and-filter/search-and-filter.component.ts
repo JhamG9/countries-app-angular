@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Dropdown } from 'src/app/models/dropdown';
 import { ConfigService } from 'src/app/services/config/config.service';
 import { CountryService } from '../../../../services/business/country.service';
@@ -19,7 +19,7 @@ export class SearchAndFilterComponent implements OnInit {
   ];
 
   constructor(public config: ConfigService,
-    private countryService:CountryService) { }
+    private countryService: CountryService) { }
 
   ngOnInit(): void {
   }
@@ -29,7 +29,15 @@ export class SearchAndFilterComponent implements OnInit {
    * @param item objeto del ripo Dropdown
    */
   selectContinent(item: Dropdown) {
-    this.countryService.getCountriesByContinent(item.id);    
+    this.countryService.getCountriesByContinent(item.id);
+  }
+
+  /**
+   * Función se ejecuta cuando cambia el valor en el input
+   * @param value valor escrito en el input
+   */
+  changeInputSearch(value) {
+    this.countryService.getCountriesByName(value);
   }
 
 }
