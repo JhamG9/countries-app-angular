@@ -22,14 +22,14 @@ export class DropdownComponent implements OnInit {
   }
 
   /**
-   * Función muestra las opciones del dropdown
+   * Function show or hide options
    */
   showitems() {
     this.showOptions = !this.showOptions;
   }
 
   /**
-   * Función selecciona una opción del listado de items
+   * Function selects an option from the list of items
    */
   selectItem(item: Dropdown) {
     this.showOptions = false;

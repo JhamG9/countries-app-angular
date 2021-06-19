@@ -17,9 +17,9 @@ export class InterceptorService implements HttpInterceptor {
   constructor() { }
 
   /**
-   * Método para interceptar las peticiones al API, colocar las cabeceras y manejar el error en caso de que suceda
-   * @param req La peticion en curso
-   * @param next La continuacion del la peticion
+   * Method to intercept requests to the API, place the headers and handle the error in case it happens
+   * @param req The petition in progress
+   * @param next The continuation of the petition
    */
   intercept(req: HttpRequest<any>, next: HttpHandler) {
     if (!req.url.includes('location.services.mozilla.com') && !req.url.includes('assets/i18n')) {
@@ -27,13 +27,13 @@ export class InterceptorService implements HttpInterceptor {
       req = req.clone({ setHeaders: headers, responseType: 'json' });
     }
 
-    // Continua con la peticion
+    // Continue with the petition
     return next.handle(req)
       .pipe(
         catchError((error: HttpErrorResponse) => {
-          // Aqui se manejan los errores ej: 
-          // 400 = mostrar mensaje,
-          // 302 = redireccionar
+          // Here the errors are handled EX:  
+          // 400 = show message,
+          // 302 = redirect
           return throwError(error);
         })
       );

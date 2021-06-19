@@ -1,4 +1,3 @@
-
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
@@ -8,7 +7,7 @@ import { environment } from 'src/environments/environment';
 })
 
 /**
- * Incluye todas los tipos de peticiones para realizar
+ * Includes all types of requests to make
  */
 export class ApiService {
   constructor(
@@ -16,9 +15,9 @@ export class ApiService {
   ) { }
 
   /**
-   * Función realiza una petición get
-   * @param url url a realizar la petición
-   * @param params parametros adicionales en caso que se requiera
+   * Function performs a get request
+   * @param url url to make the request
+   * @param params additional parameters
    */
   get(url, params = '') {
     return this.http.get(`${environment.API}${url}` + params);

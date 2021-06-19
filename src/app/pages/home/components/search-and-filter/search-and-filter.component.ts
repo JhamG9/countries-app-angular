@@ -25,16 +25,16 @@ export class SearchAndFilterComponent implements OnInit {
   }
 
   /**
-   * Función se ejecuta cuando se selecciona una opción
-   * @param item objeto del ripo Dropdown
+   * Function run when an option is selected
+   * @param item object type Dropdown
    */
   selectContinent(item: Dropdown) {
     this.countryService.getCountriesByContinent(item.id);
   }
 
   /**
-   * Función se ejecuta cuando cambia el valor en el input
-   * @param value valor escrito en el input
+   * Function is executed when the value in the input search changes
+   * @param value value written to input
    */
   changeInputSearch(value) {
     this.countryService.getCountriesByName(value);

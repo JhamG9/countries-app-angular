@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   }
 
   /**
-   * Función cambia a modo dark
+   * Function changes to dark or normal mode
    */
   changeDarkMode() {
     this.config.themeBlack = !this.config.themeBlack;

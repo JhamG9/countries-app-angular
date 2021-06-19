@@ -17,8 +17,8 @@ export class HomeComponent implements OnInit {
   }
 
   /**
-   * Función ve el detalle del pais
-   * @param country objeto de la respuesta
+   * Function redirects to country detail page
+   * @param country object of response countries
    */
   seeDetailCountry(country: any) {
     this.router.navigate([`/detail/${country.name}`]);

@@ -22,7 +22,7 @@ export class InputComponent implements OnInit {
   }
 
   /**
-   * Función emite el cambio de valor en el input
+   * Function emits the value when change in the input
    */
   keyUpInput() {
     if (this.tempValue) {

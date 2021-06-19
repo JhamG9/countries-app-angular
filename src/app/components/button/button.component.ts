@@ -16,7 +16,7 @@ export class ButtonComponent implements OnInit {
   }
 
   /**
-   * Función emite cuando se hace click en el boton
+   * Function emits when the button is clicked
    */
   clickButton() {
     this.click.emit(true);

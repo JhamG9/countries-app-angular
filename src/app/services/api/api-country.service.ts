@@ -11,29 +11,30 @@ export class ApiCountryService {
   constructor(private api: ApiService) { }
 
   /**
-   * Función obtiene los paises por contiente
-   * @param region nombre del contienente
+   * 
+   * Function gets the countries by continent in the endpoint
+   * @param continent name continent
    */
-  getCountriesByRegion(region: string) {
-    return this.api.get(`${Constants.endpoints.region}${region}`);
+  getCountriesByRegion(continent: string) {
+    return this.api.get(`${Constants.endpoints.region}${continent}`);
   }
 
   /**
-   * Función obtiene todos los paises del endpoint
+   * Function gets all the countries of the endpoint
    */
   getAllCountries() {
     return this.api.get(`${Constants.endpoints.all}`);
   }
 
   /**
-   * Función obtiene los paises por nombre del endpoint
+   * Function gets the countries by name in the endpoint
    */
   getCountriesByName(name: string) {
     return this.api.get(`${Constants.endpoints.searchByName}${name}`);
   }
 
   /**
-   * Función obtiene el pais por el nombre
+   * Function get the country by name on the endpoint
    * @param name 
    */
   getDataCountryByName(name: string) {
