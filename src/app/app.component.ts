@@ -8,6 +8,6 @@ import { ConfigService } from './services/config/config.service';
 })
 export class AppComponent {
   constructor(public config: ConfigService) {
-
+    this.config.loadThemeInStorage();
   }
 }

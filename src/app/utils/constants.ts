@@ -5,4 +5,8 @@ export class Constants {
         searchByName: 'name/',
         getCountryByName: 'name/%s?fullText=true'
     }
+
+    public static readonly storageKeys = {
+        darkTheme: 'darkTheme'
+    }
 }
