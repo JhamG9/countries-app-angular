@@ -13,6 +13,7 @@ import { CardCountryComponent } from './pages/home/components/card-country/card-
 import { FormsModule } from '@angular/forms';
 import { DetailCountryComponent } from './pages/detail-country/detail-country.component';
 import { ButtonComponent } from './components/button/button.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ButtonComponent } from './components/button/button.component';
     DropdownComponent,
     CardCountryComponent,
     DetailCountryComponent,
-    ButtonComponent
+    ButtonComponent,
+    LoadingComponent
   ],
   imports: [
     FormsModule,

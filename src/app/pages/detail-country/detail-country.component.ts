@@ -22,10 +22,10 @@ export class DetailCountryComponent implements OnInit {
   }
 
   /**
-   * Función redirecciona al listado de paises
+   * Function redirect to list countries
    */
   goBackPage() {
-    this.router.navigate(['']);
+    this.router.navigate(['/']);
   }
 
 }

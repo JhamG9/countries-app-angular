@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class ConfigService {
 
   themeBlack: boolean = false;
+
   constructor() { }
 
 }
-  

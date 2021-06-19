@@ -38,7 +38,7 @@
                     </div>
                 </div>
 
-                <div class="detail__body__border">
+                <div class="detail__body__border" *ngIf="countryService.countryDetail.borders.length > 0">
                     <p class="detail__body__border__label">Border Countries: </p>
 
                     <div class="detail__body__border__countries">
