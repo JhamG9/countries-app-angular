@@ -16,9 +16,7 @@ export class DetailCountryComponent implements OnInit {
     public countryService: CountryService) { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(data => {
-      this.countryService.getCountryByName(`${data.get('name')}`);
-    });
+    this.countryService.getCountryByName(`${this.route.snapshot.paramMap.get('name')}`);
   }
 
   /**

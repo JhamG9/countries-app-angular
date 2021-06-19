@@ -49,7 +49,7 @@ export class CountryService {
   getCountryByName(name: string) {
     this.loadingService.showLoading();
     this.countryDetail = null;
-    this.apiCountryService.getDataCountryByName(name).subscribe((resp: any) => {
+    this.apiCountryService.getCountryByName(name).subscribe((resp: any) => {
       this.countryDetail = resp[0];
       this.loadingService.hiddeLoading();
     });

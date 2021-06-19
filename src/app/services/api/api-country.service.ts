@@ -35,9 +35,9 @@ export class ApiCountryService {
 
   /**
    * Function get the country by name on the endpoint
-   * @param name 
+   * @param name name of country
    */
-  getDataCountryByName(name: string) {
+   getCountryByName(name: string) {
     return this.api.get(sprintf(Constants.endpoints.getCountryByName, name));
   }
 }

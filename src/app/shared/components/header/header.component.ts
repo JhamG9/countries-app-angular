@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ConfigService } from 'src/app/services/config/config.service';
-import { Constants } from '../../utils/constants';
+import { Constants } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +16,6 @@ export class HeaderComponent {
    */
   changeDarkMode() {
     this.config.themeBlack = !this.config.themeBlack;
-    console.log("Cambio", this.config.themeBlack);
     localStorage.setItem(Constants.storageKeys.darkTheme, `${this.config.themeBlack}`);
   }
 }
