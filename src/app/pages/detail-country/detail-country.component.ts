@@ -22,7 +22,7 @@ export class DetailCountryComponent implements OnInit {
   /**
    * Function redirect to page list of countries
    */
-  goBackPage() {
+  goBackPage(): void {
     this.router.navigate(['/']);
   }
 

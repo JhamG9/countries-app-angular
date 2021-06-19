@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DropdownComponent } from './dropdown.component';
+import { Dropdown } from 'src/app/models/dropdown';
 
 describe('DropdownComponent', () => {
   let component: DropdownComponent;
@@ -8,9 +9,9 @@ describe('DropdownComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DropdownComponent ]
+      declarations: [DropdownComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -21,5 +22,14 @@ describe('DropdownComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('Testing function showOrHiddeitems()', () => {
+    expect(component.showOrHiddeitems()).toBeUndefined();
+  });
+
+  it('Testing function selectItem()', () => {
+    const item: Dropdown = { id: 'id', label: 'label' };
+    expect(component.selectItem(item)).toBeUndefined();
   });
 });

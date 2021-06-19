@@ -17,7 +17,7 @@ export class CountryService {
    * Funtion find countries by continent
    * @param continent name continent
    */
-  getCountriesByContinent(continent: string) {
+  getCountriesByContinent(continent: string): void {
     this.apiCountryService.getCountriesByRegion(continent).subscribe((resp: any) => {
       this.countriesList = resp;
     });
@@ -26,8 +26,8 @@ export class CountryService {
   /**
    * Function get all countries
    */
-  getAllCountries() {
-    this.apiCountryService.getAllCountries().subscribe((resp: any) => {
+  getAllCountries(): void {
+    this.apiCountryService.getAllCountries().subscribe((resp: any): void => {
       this.countriesList = resp;
     });
   }
@@ -36,7 +36,7 @@ export class CountryService {
    * Function find countries by name
    * @param name name of country
    */
-  getCountriesByName(name: string) {
+  getCountriesByName(name: string): void {
     this.apiCountryService.getCountriesByName(name).subscribe((resp: any) => {
       this.countriesList = resp;
     });
@@ -46,7 +46,7 @@ export class CountryService {
    * Function find the country by name
    * @param name name of country
    */
-  getCountryByName(name: string) {
+  getCountryByName(name: string): void {
     this.loadingService.showLoading();
     this.countryDetail = null;
     this.apiCountryService.getCountryByName(name).subscribe((resp: any) => {

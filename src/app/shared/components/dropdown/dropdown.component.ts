@@ -21,14 +21,14 @@ export class DropdownComponent {
   /**
    * Function show or hide options
    */
-  showitems() {
+  showOrHiddeitems(): void {
     this.showOptions = !this.showOptions;
   }
 
   /**
    * Function selects an option from the list of items
    */
-  selectItem(item: Dropdown) {
+  selectItem(item: Dropdown): void {
     this.showOptions = false;
     this.labelSelected = item.label;
     this.valueChange.emit(item);

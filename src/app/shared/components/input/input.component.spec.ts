@@ -28,4 +28,14 @@ describe('InputComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('Testing function keyUpInput()', () =>{
+    component.tempValue = 'Colom';
+    expect(component.keyUpInput()).toBeUndefined();
+  });
+
+  it('Testing function keyUpInput() when value is empty', () =>{
+    component.tempValue = '';
+    expect(component.keyUpInput()).toBeUndefined();
+  });
 });

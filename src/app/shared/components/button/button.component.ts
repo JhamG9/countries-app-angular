@@ -6,7 +6,7 @@ import { ConfigService } from 'src/app/services/config/config.service';
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent{
+export class ButtonComponent {
 
   @Output() outputClick = new EventEmitter<boolean>();
 
@@ -15,7 +15,7 @@ export class ButtonComponent{
   /**
    * Function emits when the button is clicked
    */
-  clickButton() {
+  clickButton(): void {
     this.outputClick.emit(true);
   }
 

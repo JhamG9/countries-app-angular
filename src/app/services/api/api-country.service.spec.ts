@@ -8,7 +8,7 @@ describe('ApiCountryService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports:[
+      imports: [
         HttpClientTestingModule
       ]
     });
@@ -17,5 +17,13 @@ describe('ApiCountryService', () => {
 
   it('should be created', () => {
     expect(service).toBeTruthy();
+  });
+
+  it('Testing function getCountriesByRegion()', () => {
+    expect(service.getCountriesByRegion('Americas')).toBeDefined();
+  });
+
+  it('Testing function getCountriesByName()', () =>{
+    expect(service.getCountriesByName('Colomb')).toBeDefined();
   });
 });

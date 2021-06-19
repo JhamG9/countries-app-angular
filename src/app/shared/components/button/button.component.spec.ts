@@ -22,4 +22,8 @@ describe('ButtonComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('Testing function clickButton()', () =>{
+    expect(component.clickButton()).toBeUndefined();
+  });
 });

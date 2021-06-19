@@ -242,3 +242,269 @@ export const mockGetCountryByName = [
         cioc: "COL"
     }
 ]
+
+
+export const mockGetCountriesByContinent = [
+    {
+        name: "Colombia",
+        topLevelDomain: [
+            ".co"
+        ],
+        alpha2Code: "CO",
+        alpha3Code: "COL",
+        callingCodes: [
+            "57"
+        ],
+        capital: "Bogotá",
+        altSpellings: [
+            "CO",
+            "Republic of Colombia",
+            "República de Colombia"
+        ],
+        region: "Americas",
+        subregion: "South America",
+        population: 48759958,
+        latlng: [
+            4.0,
+            -72.0
+        ],
+        demonym: "Colombian",
+        area: 1141748.0,
+        gini: 55.9,
+        timezones: [
+            "UTC-05:00"
+        ],
+        borders: [
+            "BRA",
+            "ECU",
+            "PAN",
+            "PER",
+            "VEN"
+        ],
+        nativeName: "Colombia",
+        numericCode: "170",
+        currencies: [
+            {
+                code: "COP",
+                name: "Colombian peso",
+                symbol: "$"
+            }
+        ],
+        languages: [
+            {
+                iso639_1: "es",
+                iso639_2: "spa",
+                name: "Spanish",
+                nativeName: "Español"
+            }
+        ],
+        translations: {
+            de: "Kolumbien",
+            es: "Colombia",
+            fr: "Colombie",
+            ja: "コロンビア",
+            it: "Colombia",
+            br: "Colômbia",
+            pt: "Colômbia",
+            nl: "Colombia",
+            hr: "Kolumbija",
+            fa: "کلمبیا"
+        },
+        flag: "https://restcountries.eu/data/col.svg",
+        regionalBlocs: [
+            {
+                acronym: "PA",
+                name: "Pacific Alliance",
+                otherAcronyms: [],
+                otherNames: [
+                    "Alianza del Pacífico"
+                ]
+            },
+            {
+                acronym: "USAN",
+                name: "Union of South American Nations",
+                otherAcronyms: [
+                    "UNASUR",
+                    "UNASUL",
+                    "UZAN"
+                ],
+                otherNames: [
+                    "Unión de Naciones Suramericanas",
+                    "União de Nações Sul-Americanas",
+                    "Unie van Zuid-Amerikaanse Naties",
+                    "South American Union"
+                ]
+            }
+        ],
+        cioc: "COL"
+    },
+    {
+        name: "United States of America",
+        topLevelDomain: [
+            ".us"
+        ],
+        alpha2Code: "US",
+        alpha3Code: "USA",
+        callingCodes: [
+            "1"
+        ],
+        capital: "Washington, D.C.",
+        altSpellings: [
+            "US",
+            "USA",
+            "United States of America"
+        ],
+        region: "Americas",
+        subregion: "Northern America",
+        population: 323947000,
+        latlng: [
+            38.0,
+            -97.0
+        ],
+        demonym: "American",
+        area: 9629091.0,
+        gini: 48.0,
+        timezones: [
+            "UTC-12:00",
+            "UTC-11:00",
+            "UTC-10:00",
+            "UTC-09:00",
+            "UTC-08:00",
+            "UTC-07:00",
+            "UTC-06:00",
+            "UTC-05:00",
+            "UTC-04:00",
+            "UTC+10:00",
+            "UTC+12:00"
+        ],
+        borders: [
+            "CAN",
+            "MEX"
+        ],
+        nativeName: "United States",
+        numericCode: "840",
+        currencies: [
+            {
+                code: "USD",
+                name: "United States dollar",
+                symbol: "$"
+            }
+        ],
+        languages: [
+            {
+                iso639_1: "en",
+                iso639_2: "eng",
+                name: "English",
+                nativeName: "English"
+            }
+        ],
+        translations: {
+            de: "Vereinigte Staaten von Amerika",
+            es: "Estados Unidos",
+            fr: "États-Unis",
+            ja: "アメリカ合衆国",
+            it: "Stati Uniti D'America",
+            br: "Estados Unidos",
+            pt: "Estados Unidos",
+            nl: "Verenigde Staten",
+            hr: "Sjedinjene Američke Države",
+            fa: "ایالات متحده آمریکا"
+        },
+        flag: "https://restcountries.eu/data/usa.svg",
+        regionalBlocs: [
+            {
+                acronym: "NAFTA",
+                name: "North American Free Trade Agreement",
+                otherAcronyms: [],
+                otherNames: [
+                    "Tratado de Libre Comercio de América del Norte",
+                    "Accord de Libre-échange Nord-Américain"
+                ]
+            }
+        ],
+        cioc: "USA"
+    },
+
+    {
+        name: "Uruguay",
+        topLevelDomain: [
+            ".uy"
+        ],
+        alpha2Code: "UY",
+        alpha3Code: "URY",
+        callingCodes: [
+            "598"
+        ],
+        capital: "Montevideo",
+        altSpellings: [
+            "UY",
+            "Oriental Republic of Uruguay",
+            "República Oriental del Uruguay"
+        ],
+        region: "Americas",
+        subregion: "South America",
+        population: 3480222,
+        latlng: [
+            -33.0,
+            -56.0
+        ],
+        demonym: "Uruguayan",
+        area: 181034.0,
+        gini: 39.7,
+        timezones: [
+            "UTC-03:00"
+        ],
+        borders: [
+            "ARG",
+            "BRA"
+        ],
+        nativeName: "Uruguay",
+        numericCode: "858",
+        currencies: [
+            {
+                code: "UYU",
+                name: "Uruguayan peso",
+                symbol: "$"
+            }
+        ],
+        languages: [
+            {
+                iso639_1: "es",
+                iso639_2: "spa",
+                name: "Spanish",
+                nativeName: "Español"
+            }
+        ],
+        translations: {
+            de: "Uruguay",
+            es: "Uruguay",
+            fr: "Uruguay",
+            ja: "ウルグアイ",
+            it: "Uruguay",
+            br: "Uruguai",
+            pt: "Uruguai",
+            nl: "Uruguay",
+            hr: "Urugvaj",
+            fa: "اروگوئه"
+        },
+        flag: "https://restcountries.eu/data/ury.svg",
+        regionalBlocs: [
+            {
+                acronym: "USAN",
+                name: "Union of South American Nations",
+                otherAcronyms: [
+                    "UNASUR",
+                    "UNASUL",
+                    "UZAN"
+                ],
+                otherNames: [
+                    "Unión de Naciones Suramericanas",
+                    "União de Nações Sul-Americanas",
+                    "Unie van Zuid-Amerikaanse Naties",
+                    "South American Union"
+                ]
+            }
+        ],
+        cioc: "URU"
+    }
+];

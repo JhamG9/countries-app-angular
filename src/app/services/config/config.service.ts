@@ -13,7 +13,7 @@ export class ConfigService {
   /**
    * Function load theme config from storage
    */
-  loadThemeInStorage() {
+  loadThemeInStorage(): void {
     const darkTheme = localStorage.getItem(Constants.storageKeys.darkTheme);
     if (darkTheme === 'true') {
       this.themeBlack = true;

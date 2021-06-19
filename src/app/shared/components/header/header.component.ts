@@ -14,7 +14,7 @@ export class HeaderComponent {
   /**
    * Function changes to dark or normal mode
    */
-  changeDarkMode() {
+  changeDarkMode():void {
     this.config.themeBlack = !this.config.themeBlack;
     localStorage.setItem(Constants.storageKeys.darkTheme, `${this.config.themeBlack}`);
   }

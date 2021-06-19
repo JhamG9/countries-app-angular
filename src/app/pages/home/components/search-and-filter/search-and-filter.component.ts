@@ -25,7 +25,7 @@ export class SearchAndFilterComponent {
    * Function run when an option is selected
    * @param item object type Dropdown
    */
-  selectContinent(item: Dropdown) {
+  selectContinent(item: Dropdown): void {
     this.countryService.getCountriesByContinent(item.id);
   }
 
@@ -33,7 +33,7 @@ export class SearchAndFilterComponent {
    * Function is executed when the value in the input search changes
    * @param value value written to input
    */
-  changeInputSearch(value) {
+  searchCountriesByName(value): void {
     this.countryService.getCountriesByName(value);
   }
 }

@@ -21,7 +21,7 @@ export class InputComponent {
   /**
    * Function emits the value when change in the input
    */
-  keyUpInput() {
+  keyUpInput(): void {
     if (this.tempValue) {
       this.keyUpChange.emit(this.tempValue);
     }

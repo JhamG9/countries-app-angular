@@ -12,14 +12,14 @@ export class LoadingService {
   /**
    * Function show the loading
    */
-  showLoading() {
+  showLoading(): void {
     this.showLoadingVar = true;
   }
 
   /**
    * Function hidde the loading
    */
-  hiddeLoading() {
+  hiddeLoading(): void {
     this.showLoadingVar = false;
   }
 }
