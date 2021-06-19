@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SearchAndFilterComponent } from './search-and-filter.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { InputComponent } from '../../../../components/input/input.component';
+import { DropdownComponent } from '../../../../components/dropdown/dropdown.component';
+import { FormsModule } from '@angular/forms';
 
 describe('SearchAndFilterComponent', () => {
   let component: SearchAndFilterComponent;
@@ -8,9 +12,17 @@ describe('SearchAndFilterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchAndFilterComponent ]
+      imports: [
+        HttpClientTestingModule,
+        FormsModule
+      ],
+      declarations: [
+        SearchAndFilterComponent,
+        InputComponent,
+        DropdownComponent
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

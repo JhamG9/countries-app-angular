@@ -36,5 +36,4 @@ export class SearchAndFilterComponent {
   changeInputSearch(value) {
     this.countryService.getCountriesByName(value);
   }
-
 }

@@ -1,4 +1,4 @@
-<div class="card" [ngClass]="config.themeBlack ? 'card__theme-dark': ''">
+<div class="card" [ngClass]="config.themeBlack ? 'card__theme-dark': ''" *ngIf="data">
     <img loading="lazy" [src]="data?.flag" class="card__img" />
     <div class="card__info">
         <p class="card__info__title">{{data.name}}</p>
