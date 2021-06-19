@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ConfigService } from '../../services/config/config.service';
 
 @Component({
@@ -6,20 +6,17 @@ import { ConfigService } from '../../services/config/config.service';
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent{
 
-  @Output() click = new EventEmitter<boolean>();
+  @Output() outputClick = new EventEmitter<boolean>();
 
   constructor(public config: ConfigService) { }
-
-  ngOnInit(): void {
-  }
 
   /**
    * Function emits when the button is clicked
    */
   clickButton() {
-    this.click.emit(true);
+    this.outputClick.emit(true);
   }
 
 }

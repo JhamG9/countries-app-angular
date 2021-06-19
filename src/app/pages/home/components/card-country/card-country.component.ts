@@ -6,13 +6,10 @@ import { ConfigService } from '../../../../services/config/config.service';
   templateUrl: './card-country.component.html',
   styleUrls: ['./card-country.component.scss']
 })
-export class CardCountryComponent implements OnInit {
+export class CardCountryComponent {
 
   @Input() data: any;
 
   constructor(public config: ConfigService) { }
-
-  ngOnInit(): void {
-  }
 
 }

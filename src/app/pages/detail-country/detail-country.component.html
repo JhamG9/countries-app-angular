@@ -1,5 +1,5 @@
 <div class="detail">
-    <app-button (click)="goBackPage()"></app-button>
+    <app-button (outputClick)="goBackPage()"></app-button>
 
     <div class="detail__body" *ngIf="countryService.countryDetail">
         <div class="row">

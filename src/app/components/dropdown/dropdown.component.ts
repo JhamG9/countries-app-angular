@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Dropdown } from 'src/app/models/dropdown';
 import { ConfigService } from 'src/app/services/config/config.service';
 
@@ -7,7 +7,7 @@ import { ConfigService } from 'src/app/services/config/config.service';
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.scss']
 })
-export class DropdownComponent implements OnInit {
+export class DropdownComponent {
 
   @Input() items: Array<Dropdown> = [];
   @Input() placeholder: string;
@@ -17,9 +17,6 @@ export class DropdownComponent implements OnInit {
   showOptions: boolean = false;
 
   constructor(public config: ConfigService) { }
-
-  ngOnInit(): void {
-  }
 
   /**
    * Function show or hide options

@@ -7,19 +7,16 @@ import { Constants } from '../../utils/constants';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   constructor(public config: ConfigService) { }
-
-  ngOnInit(): void {
-  }
 
   /**
    * Function changes to dark or normal mode
    */
   changeDarkMode() {
     this.config.themeBlack = !this.config.themeBlack;
-    console.log("Cambio",this.config.themeBlack);
+    console.log("Cambio", this.config.themeBlack);
     localStorage.setItem(Constants.storageKeys.darkTheme, `${this.config.themeBlack}`);
   }
 }

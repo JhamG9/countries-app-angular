@@ -1,5 +1,5 @@
 import { EventEmitter, Input, Output } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ConfigService } from 'src/app/services/config/config.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { ConfigService } from 'src/app/services/config/config.service';
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss']
 })
-export class InputComponent implements OnInit {
+export class InputComponent {
 
   @Input() placeholder: string = '';
   @Input() icon: string = '';
@@ -17,9 +17,6 @@ export class InputComponent implements OnInit {
   tempValue: string = '';
 
   constructor(public config: ConfigService) { }
-
-  ngOnInit(): void {
-  }
 
   /**
    * Function emits the value when change in the input

@@ -8,7 +8,7 @@ import { CountryService } from '../../../../services/business/country.service';
   templateUrl: './search-and-filter.component.html',
   styleUrls: ['./search-and-filter.component.scss']
 })
-export class SearchAndFilterComponent implements OnInit {
+export class SearchAndFilterComponent {
 
   continents: Array<Dropdown> = [
     { id: 'Africa', label: 'Africa' },
@@ -20,9 +20,6 @@ export class SearchAndFilterComponent implements OnInit {
 
   constructor(public config: ConfigService,
     private countryService: CountryService) { }
-
-  ngOnInit(): void {
-  }
 
   /**
    * Function run when an option is selected
